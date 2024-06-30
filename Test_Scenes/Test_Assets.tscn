@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8p8bbqgljcle"]
+
+[ext_resource type="Texture2D" uid="uid://bn3lqeoxkxj7e" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_olacm"]
+[ext_resource type="Texture2D" uid="uid://b3v6fvqn27er1" path="res://addons/Tiny Swords/Factions/Goblins/Troops/Torch/Red/Torch_Red.png" id="2_5p08u"]
+[ext_resource type="Texture2D" uid="uid://c2wywl7rf5y3h" path="res://addons/Tiny Swords/Factions/Knights/Troops/Dead/Dead.png" id="3_qyner"]
+[ext_resource type="PackedScene" uid="uid://dtt5bre1tptc0" path="res://Misc/skull.tscn" id="4_t2be2"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(0, 3)
+
+[node name="WarriorBlue" type="Sprite2D" parent="."]
+position = Vector2(-174, 256)
+texture = ExtResource("1_olacm")
+
+[node name="TorchRed" type="Sprite2D" parent="."]
+position = Vector2(1093, -31)
+texture = ExtResource("2_5p08u")
+
+[node name="Dead" type="Sprite2D" parent="."]
+position = Vector2(1019, 1115)
+texture = ExtResource("3_qyner")
+
+[node name="Skull" parent="." instance=ExtResource("4_t2be2")]
+position = Vector2(600, 872)
+scale = Vector2(1, 1.03605)

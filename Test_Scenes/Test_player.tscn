@@ -1,0 +1,108 @@
+[gd_scene load_steps=3 format=3 uid="uid://dk5gijlax3yx7"]
+
+[ext_resource type="Texture2D" uid="uid://bn3lqeoxkxj7e" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_383iu"]
+[ext_resource type="PackedScene" uid="uid://w8hs3ahe28qx" path="res://Player/Player.tscn" id="2_p4h15"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="WarriorBlue" type="Sprite2D" parent="."]
+position = Vector2(870, 345)
+scale = Vector2(0.347622, 0.347622)
+texture = ExtResource("1_383iu")
+
+[node name="Label" type="Label" parent="WarriorBlue"]
+offset_left = -669.0
+offset_top = -723.0
+offset_right = -560.0
+offset_bottom = -653.0
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 51
+text = "IDLE"
+
+[node name="Label9" type="Label" parent="WarriorBlue"]
+offset_left = -519.0
+offset_top = -934.0
+offset_right = -443.0
+offset_bottom = -911.0
+scale = Vector2(13.6663, 8.923)
+text = "0 1 2 3 4 5"
+
+[node name="Label10" type="Label" parent="WarriorBlue"]
+offset_left = 560.0
+offset_top = -784.0
+offset_right = 573.0
+offset_bottom = -626.0
+scale = Vector2(10.7463, 7.56301)
+text = "0 1 2 3 4 5 6 7"
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="WarriorBlue"]
+offset_left = -684.652
+offset_top = -529.311
+offset_right = -541.652
+offset_bottom = -459.311
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 51
+text = "RUN"
+
+[node name="Label3" type="Label" parent="WarriorBlue"]
+offset_left = -875.0
+offset_top = -346.0
+offset_right = -548.0
+offset_bottom = -276.0
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 51
+text = "attack_side_1"
+
+[node name="Label4" type="Label" parent="WarriorBlue"]
+offset_left = -902.0
+offset_top = -144.0
+offset_right = -575.0
+offset_bottom = -74.0
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 51
+text = "attack_side_2
+"
+
+[node name="Label5" type="Label" parent="WarriorBlue"]
+offset_left = -912.0
+offset_top = 36.0
+offset_right = -548.0
+offset_bottom = 106.0
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 51
+text = "attack_down_1
+"
+
+[node name="Label6" type="Label" parent="WarriorBlue"]
+offset_left = -913.0
+offset_top = 219.0
+offset_right = -549.0
+offset_bottom = 289.0
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 51
+text = "attack_down_2
+"
+
+[node name="Label7" type="Label" parent="WarriorBlue"]
+offset_left = -879.0
+offset_top = 414.0
+offset_right = -588.0
+offset_bottom = 484.0
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 51
+text = "attack_up_1
+"
+
+[node name="Label8" type="Label" parent="WarriorBlue"]
+offset_left = -826.0
+offset_top = 621.0
+offset_right = -535.0
+offset_bottom = 691.0
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 51
+text = "attack_up_2
+"
+
+[node name="CharacterBody2D3" parent="." instance=ExtResource("2_p4h15")]
+position = Vector2(407, 387)

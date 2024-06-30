@@ -1,0 +1,46 @@
+[gd_scene load_steps=9 format=3 uid="uid://bhuqo3y02o71c"]
+
+[ext_resource type="PackedScene" uid="uid://w8hs3ahe28qx" path="res://Player/Player.tscn" id="1_w7dds"]
+[ext_resource type="Script" path="res://Systems/MobSpawner.cs" id="2_gwfe7"]
+[ext_resource type="PackedScene" uid="uid://ixb4ugxv38hu" path="res://Enemies/Goblin.tscn" id="3_xxc3j"]
+[ext_resource type="PackedScene" uid="uid://l4qmdb1g8iqt" path="res://Enemies/Pawn.tscn" id="4_ohrdi"]
+[ext_resource type="PackedScene" uid="uid://ccxnod60o3wix" path="res://Enemies/Sheep.tscn" id="5_rd0y6"]
+[ext_resource type="PackedScene" uid="uid://dyc3skecjyksq" path="res://UI/game_ui.tscn" id="7_dxjsm"]
+[ext_resource type="PackedScene" uid="uid://d0qjr62fnhpeb" path="res://Misc/meat.tscn" id="8_f0ga6"]
+
+[sub_resource type="Curve2D" id="Curve2D_xl3t1"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -671, -410, 0, 0, 0, 0, 685, -427, 0, 0, 0, 0, 692, 461, 0, 0, 0, 0, -677, 495, 0, 0, 0, 0, -674, -356)
+}
+point_count = 5
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_w7dds")]
+position = Vector2(578, 325)
+ritualInterval = 5.0
+
+[node name="MobSpawner" type="Node2D" parent="."]
+position = Vector2(583, 288)
+script = ExtResource("2_gwfe7")
+enemies = Array[PackedScene]([ExtResource("3_xxc3j"), ExtResource("4_ohrdi"), ExtResource("5_rd0y6")])
+mobs_per_minute = 120.0
+
+[node name="Path2D" type="Path2D" parent="MobSpawner"]
+curve = SubResource("Curve2D_xl3t1")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="MobSpawner/Path2D"]
+unique_name_in_owner = true
+position = Vector2(-671, -410)
+rotation = -0.0125362
+
+[node name="GameUI" parent="." instance=ExtResource("7_dxjsm")]
+
+[node name="Meat" parent="." instance=ExtResource("8_f0ga6")]
+position = Vector2(440, 427)
+
+[node name="Meat2" parent="." instance=ExtResource("8_f0ga6")]
+position = Vector2(739, 443)
+
+[node name="Meat3" parent="." instance=ExtResource("8_f0ga6")]
+position = Vector2(569, 520)

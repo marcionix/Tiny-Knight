@@ -1,0 +1,102 @@
+[gd_scene load_steps=8 format=3 uid="uid://5skm2vti052r"]
+
+[ext_resource type="Texture2D" uid="uid://dgctf7ubkl5s2" path="res://addons/Tiny Swords/Factions/Knights/Troops/Pawn/Red/Pawn_Red.png" id="1_xmtvy"]
+[ext_resource type="PackedScene" uid="uid://ixb4ugxv38hu" path="res://Enemies/Goblin.tscn" id="3_66ec1"]
+[ext_resource type="PackedScene" uid="uid://w8hs3ahe28qx" path="res://Player/Player.tscn" id="3_k8xg7"]
+[ext_resource type="PackedScene" uid="uid://l4qmdb1g8iqt" path="res://Enemies/Pawn.tscn" id="4_a26nk"]
+[ext_resource type="PackedScene" uid="uid://ccxnod60o3wix" path="res://Enemies/Sheep.tscn" id="5_i685u"]
+[ext_resource type="Script" path="res://Systems/CameraFollower.cs" id="6_6iwn4"]
+[ext_resource type="PackedScene" uid="uid://d0qjr62fnhpeb" path="res://Misc/meat.tscn" id="7_r3hix"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="WarriorBlue" type="Sprite2D" parent="."]
+position = Vector2(870, 345)
+scale = Vector2(0.347622, 0.347622)
+texture = ExtResource("1_xmtvy")
+
+[node name="Label" type="Label" parent="WarriorBlue"]
+offset_left = -704.788
+offset_top = -506.297
+offset_right = -595.788
+offset_bottom = -436.297
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 51
+text = "IDLE"
+
+[node name="Label9" type="Label" parent="WarriorBlue"]
+offset_left = -523.557
+offset_top = -730.679
+offset_right = -447.557
+offset_bottom = -707.679
+scale = Vector2(13.6663, 8.923)
+text = "0 1 2 3 4 5"
+
+[node name="Label10" type="Label" parent="WarriorBlue"]
+offset_left = 555.0
+offset_top = -587.0
+offset_right = 568.0
+offset_bottom = -434.0
+scale = Vector2(10.7463, 7.56301)
+text = "0 1 2 3 4 5"
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="WarriorBlue"]
+offset_left = -802.596
+offset_top = -304.929
+offset_right = -659.596
+offset_bottom = -234.929
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 51
+text = "RUN"
+
+[node name="Label3" type="Label" parent="WarriorBlue"]
+offset_left = -900.403
+offset_top = -143.834
+offset_right = -573.403
+offset_bottom = -73.8344
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 51
+text = "attack_side_1"
+
+[node name="Label4" type="Label" parent="WarriorBlue"]
+offset_left = -903.28
+offset_top = 54.657
+offset_right = -576.28
+offset_bottom = 124.657
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 51
+text = "attack_side_2
+"
+
+[node name="Player" parent="." instance=ExtResource("3_k8xg7")]
+
+[node name="Goblin" parent="." instance=ExtResource("3_66ec1")]
+position = Vector2(392, 112)
+
+[node name="Goblin2" parent="." instance=ExtResource("3_66ec1")]
+position = Vector2(375, -90)
+
+[node name="Pawn" parent="." instance=ExtResource("4_a26nk")]
+position = Vector2(150, 134)
+
+[node name="Sheep" parent="." instance=ExtResource("5_i685u")]
+position = Vector2(153, 243)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("6_6iwn4")
+
+[node name="Meat" parent="." instance=ExtResource("7_r3hix")]
+position = Vector2(-161, 9)
+
+[node name="Meat2" parent="." instance=ExtResource("7_r3hix")]
+position = Vector2(-358, -70)
+
+[node name="Meat3" parent="." instance=ExtResource("7_r3hix")]
+position = Vector2(-412, 125)
+
+[node name="Meat4" parent="." instance=ExtResource("7_r3hix")]
+position = Vector2(-286, 48)
+
+[node name="Meat5" parent="." instance=ExtResource("7_r3hix")]
+position = Vector2(-484, -14)

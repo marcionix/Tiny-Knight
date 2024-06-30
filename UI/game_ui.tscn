@@ -1,0 +1,94 @@
+[gd_scene load_steps=9 format=3 uid="uid://dyc3skecjyksq"]
+
+[ext_resource type="StyleBox" uid="uid://duc1jdwkiwc1f" path="res://Misc/new_style_box_texture.tres" id="1_cw8c6"]
+[ext_resource type="Script" path="res://UI/GameUI.cs" id="1_u3yob"]
+[ext_resource type="SystemFont" uid="uid://ddkdt6ntoosok" path="res://Misc/new_system_font.tres" id="3_bxd3b"]
+[ext_resource type="Texture2D" uid="uid://cdyna32ufq1vp" path="res://addons/Tiny Swords/Resources/Resources/M_Idle_(NoShadow).png" id="4_n782d"]
+[ext_resource type="Texture2D" uid="uid://dhel8j0eox78g" path="res://addons/Tiny Swords/Resources/Resources/G_Idle_(NoShadow).png" id="5_gmhca"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oenl3"]
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygwk1"]
+atlas = ExtResource("4_n782d")
+region = Rect2(40, 48, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rmhix"]
+atlas = ExtResource("5_gmhca")
+region = Rect2(40, 48, 56, 56)
+
+[node name="GameUI" type="CanvasLayer"]
+script = ExtResource("1_u3yob")
+
+[node name="TimerLabel" type="Label" parent="."]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -96.0
+offset_top = 45.0
+offset_right = 96.0
+offset_bottom = 92.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_bxd3b")
+theme_override_font_sizes/font_size = 30
+text = "8:58
+"
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -399.0
+offset_top = 13.0
+offset_right = -13.0
+offset_bottom = 110.0
+grow_horizontal = 0
+theme_override_styles/panel = ExtResource("1_cw8c6")
+
+[node name="MeatLabel" type="Label" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 91.0
+offset_top = 20.0
+offset_right = 149.0
+offset_bottom = 48.0
+theme_override_fonts/font = ExtResource("3_bxd3b")
+text = "50
+"
+label_settings = SubResource("LabelSettings_oenl3")
+
+[node name="TextureRect" type="TextureRect" parent="Panel/MeatLabel"]
+layout_mode = 0
+offset_left = -67.0
+offset_top = -17.0
+offset_right = -3.0
+offset_bottom = 47.0
+texture = SubResource("AtlasTexture_ygwk1")
+stretch_mode = 4
+
+[node name="GoldLabel" type="Label" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -156.0
+offset_top = 20.0
+offset_right = -28.0
+offset_bottom = 48.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("3_bxd3b")
+text = "0000000"
+label_settings = SubResource("LabelSettings_oenl3")
+
+[node name="TextureRect2" type="TextureRect" parent="Panel/GoldLabel"]
+layout_mode = 0
+offset_left = -69.0
+offset_top = -17.0
+offset_right = -5.0
+offset_bottom = 47.0
+texture = SubResource("AtlasTexture_rmhix")
+stretch_mode = 4

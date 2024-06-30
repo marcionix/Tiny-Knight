@@ -1,0 +1,77 @@
+[gd_scene load_steps=4 format=3 uid="uid://5mrjpq4gji20"]
+
+[ext_resource type="Texture2D" uid="uid://dgctf7ubkl5s2" path="res://addons/Tiny Swords/Factions/Knights/Troops/Pawn/Red/Pawn_Red.png" id="1_k2vi6"]
+[ext_resource type="PackedScene" uid="uid://w8hs3ahe28qx" path="res://Player/Player.tscn" id="2_np5vq"]
+[ext_resource type="PackedScene" uid="uid://ccxnod60o3wix" path="res://Enemies/Sheep.tscn" id="3_375n1"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="WarriorBlue" type="Sprite2D" parent="."]
+position = Vector2(870, 345)
+scale = Vector2(0.347622, 0.347622)
+texture = ExtResource("1_k2vi6")
+
+[node name="Label" type="Label" parent="WarriorBlue"]
+offset_left = -704.788
+offset_top = -506.297
+offset_right = -595.788
+offset_bottom = -436.297
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 51
+text = "IDLE"
+
+[node name="Label9" type="Label" parent="WarriorBlue"]
+offset_left = -523.557
+offset_top = -730.679
+offset_right = -447.557
+offset_bottom = -707.679
+scale = Vector2(13.6663, 8.923)
+text = "0 1 2 3 4 5"
+
+[node name="Label10" type="Label" parent="WarriorBlue"]
+offset_left = 555.0
+offset_top = -587.0
+offset_right = 568.0
+offset_bottom = -434.0
+scale = Vector2(10.7463, 7.56301)
+text = "0 1 2 3 4 5"
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="WarriorBlue"]
+offset_left = -802.596
+offset_top = -304.929
+offset_right = -659.596
+offset_bottom = -234.929
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 51
+text = "RUN"
+
+[node name="Label3" type="Label" parent="WarriorBlue"]
+offset_left = -900.403
+offset_top = -143.834
+offset_right = -573.403
+offset_bottom = -73.8344
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 51
+text = "attack_side_1"
+
+[node name="Label4" type="Label" parent="WarriorBlue"]
+offset_left = -903.28
+offset_top = 54.657
+offset_right = -576.28
+offset_bottom = 124.657
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 51
+text = "attack_side_2
+"
+
+[node name="Sheep" parent="." instance=ExtResource("3_375n1")]
+position = Vector2(432, 108)
+
+[node name="Sheep2" parent="." instance=ExtResource("3_375n1")]
+position = Vector2(36, 73)
+
+[node name="Sheep3" parent="." instance=ExtResource("3_375n1")]
+position = Vector2(314, 322)
+
+[node name="Player" parent="." instance=ExtResource("2_np5vq")]

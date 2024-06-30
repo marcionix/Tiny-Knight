@@ -1,0 +1,13 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://duc1jdwkiwc1f"]
+
+[ext_resource type="Texture2D" uid="uid://me5k66amj4f7" path="res://addons/Tiny Swords/UI/Banners/Banner_Horizontal.png" id="1_20nvo"]
+
+[resource]
+texture = ExtResource("1_20nvo")
+texture_margin_left = 31.0
+texture_margin_top = 17.0
+texture_margin_right = 31.0
+texture_margin_bottom = 40.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(32, 48, 128, 128)

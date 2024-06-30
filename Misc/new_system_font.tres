@@ -1,0 +1,5 @@
+[gd_resource type="SystemFont" format=3 uid="uid://ddkdt6ntoosok"]
+
+[resource]
+font_names = PackedStringArray("Verdana")
+font_weight = 999
